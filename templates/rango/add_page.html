@@ -13,11 +13,17 @@
 					{{ hidden }}
 				{% endfor %}
 				{% for field in form.visible_fields %}
+					<div>
 					{{ field.errors }}
 					{{ field.help_text }}
 					{{ field }}
+					</div>
+					<div>  
+					</div>
 				{% endfor %}
+				<div>
 				<input type="submit" name="submit" value="Add Page" />
+				</div>
 			</form>
 		</div>
 	</body>
