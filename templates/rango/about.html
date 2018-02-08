@@ -1,22 +1,11 @@
 <!DOCTYPE html>
-
-	{% load staticfiles %}
-
-	<html>
-	
-	<head>
-		<title> About </title>
-	</head>
-	
-	<body>
-		<h1> This is the about page </h1>
-		<div>
-			<strong> {{madeby}}</strong><br />
-		</div>
-		<div>
-			<a href="/rango">Home</a><br />
-			<img src="{{ MEDIA_URL}}cat.jpg" />
-		</div>
-	</body>
-
-	</html>
+{% extends 'rango/base.html' %}
+{% load staticfiles %}
+{% block title_block %}
+	About
+{% endblock %}
+{% block body_block %}
+	<h1> This is the about page </h1>
+	<strong> {{madeby}}</strong><br />
+	<img src="{{ MEDIA_URL}}cat.jpg" />
+{% endblock %}
